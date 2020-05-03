@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="A minimal startpage with links to common sites">
+		<meta name="keywords" content="Startpage, links, time, date, serach, bar, box, start">
+		<meta name="author" content="calvinchd">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/png" href="favicon.png" sizes="32x32"/>
+		<link rel="stylesheet" href="styles/main.css">
+		<script src="scripts/custom.js"></script>
+		<script src="scripts/time.js"></script>
+		<script src="scripts/links.js"></script>
+		<title>Home</title>
+	</head>
+	<body>
+		<div class="centerContainer"><div class="centerContent" id="mainContent">
+			<div class="clockTime"><span id="cTime"></span></div>
+			<div class="clockDate"><span id="cDate"></span></div>
+			<div class="clockGreet"><span id="cGreet"></span><span id="cGreetName"></span></div>
+			<hr class="separator">
+			<div class="searchBox">
+				<form action="https://duckduckgo.com/" method="get">
+					<input class="inputBox" type="text" name="q" placeholder="DuckDuckGo..." autofocus/></form>
+			</div>
+		</div></div>
+	</body>
+</html>
