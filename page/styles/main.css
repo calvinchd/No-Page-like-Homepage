@@ -1,11 +1,12 @@
 body {
 	background-color: #282828;
 	color: #ebdbb2;
-	font-family: Open Sans,sans-serif;
+	font-family: Open Sans, sans-serif;
 	font-size: 16px;
 	font-weight: 300;
 	user-select: none;
 }
+
 .centerContainer {
 	margin: 0;
 	padding: 0;
@@ -13,13 +14,14 @@ body {
 	align-items: center;
 	justify-content: center;
 }
+
 .centerContent {
 	position: absolute;
 	min-width: 500px;
-	max-width:100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+	max-width: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .linksColumnsGroup {
@@ -27,9 +29,11 @@ body {
 	margin: auto auto 8px auto;
 	table-layout: fixed;
 }
+
 .linksColumn {
 	display: table-cell;
 }
+
 .linksHeader {
 	border-bottom: 6px ridge #d65d0e;
 	border-radius: 0px 0px 6px 6px;
@@ -41,11 +45,18 @@ body {
 	font-size: 20px;
 	font-weight: 700;
 	white-space: nowrap;
-    animation: headAnim 200ms ease-out 500ms backwards;
+	animation: headAnim 200ms ease-out 500ms backwards;
 }
+
 @keyframes headAnim {
-    from { opacity: 0; transform: translateY(-20px);}
-    to   { opacity: 1; transform: translateY(0);}
+	from {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 .linksIcon {
@@ -54,6 +65,7 @@ body {
 	border-radius: 6px;
 	margin-right: 12px;
 }
+
 .linksItem {
 	margin: auto;
 	text-align: left;
@@ -64,25 +76,34 @@ body {
 	white-space: nowrap;
 	transition: color 100ms linear, background 200ms linear;
 	will-change: transform;
-    animation: slideOutLinks 200ms ease-out 600ms backwards;
+	animation: slideOutLinks 200ms ease-out 600ms backwards;
 }
-.linksItem:hover{
+
+.linksItem:hover {
 	background: #32302f;
 	color: #458588;
 }
+
 .linksItem:active {
 	background: #689d6a;
 	color: #b8bb26;
 }
+
 @keyframes slideOutLinks {
-    from { opacity: 0; transform: translateX(-20px);}
-    to   { opacity: 1; transform: translateX(0);}
+	from {
+		opacity: 0;
+		transform: translateX(-20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
 
 a, a:active, a:visited {
 	text-decoration: none;
 	color: inherit;
-    outline:none;
+	outline: none;
 }
 
 .clockTime {
@@ -90,18 +111,26 @@ a, a:active, a:visited {
 	text-align: center;
 	font-size: 64px;
 	font-weight: 300;
-    animation: fadeInUp 300ms ease-out 100ms backwards;
+	animation: fadeInUp 300ms ease-out 100ms backwards;
 }
+
 .clockDate {
 	margin: auto;
 	text-align: center;
 	font-size: 28px;
 	font-weight: 300;
-    animation: fadeInUp 300ms ease-out 100ms backwards;
+	animation: fadeInUp 300ms ease-out 100ms backwards;
 }
+
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px);}
-    to   { opacity: 1; transform: translateY(0);}
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 .clockGreet {
@@ -111,14 +140,21 @@ a, a:active, a:visited {
 	font-weight: 300;
 	margin-top: 8px;
 	will-change: transform;
-    animation: greetAnim 300ms ease-out 200ms backwards;
-}
-@keyframes greetAnim {
-    from { opacity: 0; transform: translateY(20px);}
-    to   { opacity: 1; transform: translateY(0);}
+	animation: greetAnim 300ms ease-out 200ms backwards;
 }
 
-.searchBox{
+@keyframes greetAnim {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.searchBox {
 	display: flex;
 	grid-column: 1/-1;
 	padding-bottom: 0px;
@@ -127,7 +163,8 @@ a, a:active, a:visited {
 	align-items: center;
 	justify-content: center;
 }
-.inputBox{
+
+.inputBox {
 	border-top-style: none;
 	border-right-style: none;
 	border-left-style: none;
@@ -143,18 +180,25 @@ a, a:active, a:visited {
 	margin-left: 0;
 	margin-bottom: 0px;
 	will-change: transform;
-    animation: searchAnim 300ms ease-out 400ms backwards;
+	animation: searchAnim 300ms ease-out 400ms backwards;
 }
+
 @keyframes searchAnim {
-    from { opacity: 0; transform: translateX(-40px);}
-    to   { opacity: 1; transform: translateX(0);}
+	from {
+		opacity: 0;
+		transform: translateX(-40px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
 
 .separator {
-	width:100%;
+	width: 100%;
 	border-bottom: 6px ridge #d65d0e;
 	border-radius: 0px 0px 6px 6px;
-	color:#d65d0e;
-	margin-top:0px;
-    animation: fadeInUp 500ms ease-out 300ms backwards;
+	color: #d65d0e;
+	margin-top: 0px;
+	animation: fadeInUp 500ms ease-out 300ms backwards;
 }
