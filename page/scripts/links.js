@@ -1,6 +1,13 @@
 window.addEventListener("load", generateLinks, true);
 
-function generateLinks(){
+function generateLinks() {
+	if ((2 & feats) === 2) { // Enable\Disable Search bar
+		document.getElementById("searchBox").style = "display:none;";
+	}
+	// Disable links
+	if ((1 & feats) === 1) { // Enable\Disable Links
+		return;
+	}
 	var contentDiv = document.getElementById("mainContent");
 	for (const colGroups of linksGroups) {
 		var group = newRow(contentDiv);

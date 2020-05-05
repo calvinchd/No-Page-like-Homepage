@@ -161,7 +161,6 @@ a, a:active, a:visited {
 
 .searchBox {
 	display: flex;
-	grid-column: 1/-1;
 	padding-bottom: 0px;
 	margin-top: 16px;
 	margin-bottom: 20px;

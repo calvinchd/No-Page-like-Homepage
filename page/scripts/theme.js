@@ -1,6 +1,6 @@
-const themeDir="styles/themes/";
-const themeLight="gruvbox-light";
-const themeDark="gruvbox-dark";
+const themeDir = "styles/themes/";
+const themeLight = "gruvbox-light";
+const themeDark = "gruvbox-dark";
 
 window.addEventListener("load", initTheme, true);
 
@@ -9,12 +9,15 @@ function initTheme() {
 	if (localStorage.getItem("theme") === "light") {
 		document.getElementById('theme').href = setLight() + ".css";
 	}
+	if ((32 & feats) === 32) {
+		document.getElementById("themeButton").style = "display:none;";
+	}
 }
 
 function toggleTheme() {
 	var link = document.getElementById('theme');
 	var current = link.href.split('/').pop();
-	if (current === (themeDark + ".css")){
+	if (current === (themeDark + ".css")) {
 		current = setLight();
 	} else {
 		current = setDark();

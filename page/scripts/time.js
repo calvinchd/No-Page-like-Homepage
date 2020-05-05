@@ -1,14 +1,32 @@
 window.addEventListener("load", initialClock, true);
 
 function initialClock() {
-	updateTime();
-	setGreeting();
-	if(!(userName.trim().length === 0)) {
-		document.getElementById('cGreetName').innerHTML = ", " + userName;
+	// Disable time content separator
+	if ((26 & feats) === 26) { // Enable\Disable time, date and greeting
+		document.getElementById('greetLine').style = "display:none;";
+		return; // don't check if need to enable rest
 	}
-	setInterval(updateTime, 1000);
-	setInterval(setGreeting, 3600000);
+	if ((24 & feats) === 0) { // Enable\Disable Time and date
+		updateTime();
+		setInterval(updateTime, 1000);
+	}
+	else if ((16 & feats) === 0) { // Enable\Disable Time
+		setTime(new Date());
+		setInterval(() => { setTime(new Date()) }, 1000);
+	}
+	else if ((8 & feats) === 0) { // Enable\Disable Date
+		setDate(new Date());
+		setInterval(() => { setDate(new Date()) }, 60000);
+	}
+	if ((4 & feats) === 0) { // Enable\Disable Greeting
+		if (!(userName.trim().length === 0)) {
+			document.getElementById('cGreetName').innerHTML = ", " + userName;
+		}
+		setGreeting();
+		setInterval(setGreeting, 3600000);
+	}
 }
+
 // Update date and time
 function updateTime() {
 	var today = new Date();

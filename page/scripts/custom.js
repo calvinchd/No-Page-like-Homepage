@@ -1,4 +1,5 @@
 const userName = "calvinchd";
+const feats = 0;
 const linksGroups = [[
 	{
 		"header": "",
