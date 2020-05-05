@@ -13,6 +13,12 @@ A minimal and simple desktop homepage, startpage and/or new tab page. It is not 
 ``` javascript
 const userName = "John Smith";
 ```
+- Enable\Disable features
+``` javascript
+const feats = 0b000000; // set bit to 1 to disable
+//0b | Theme | Clock | Date | Greeting | Search | Links
+// 0b111000 to disable theme, clock and date
+```
 - Set up link shortcuts, columns, rows and color codes for each link.
 ``` javascript
 const linksGroups = [[
