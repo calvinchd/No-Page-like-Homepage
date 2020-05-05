@@ -23,12 +23,14 @@ function toggleTheme() {
 
 // Set theme and save in local storage
 function setDark() {
-	document.getElementById('themeButton').innerHTML = "&#x1F31E;";
+	//document.getElementById('themeButton').innerHTML = "&#x1F31E;";
+	document.getElementById('themeButton').innerHTML = "&#x1F642;";
 	localStorage.removeItem("theme");
 	return current = themeDir + themeDark;
 }
 function setLight() {
-	document.getElementById('themeButton').innerHTML = "&#x1F311;";
+	//document.getElementById('themeButton').innerHTML = "&#x1F311;";
+	document.getElementById('themeButton').innerHTML = "&#x1F60E;";
 	localStorage.setItem("theme", "light");
 	return themeDir + themeLight;
 }
