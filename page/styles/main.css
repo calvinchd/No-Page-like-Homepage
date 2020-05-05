@@ -209,6 +209,9 @@ a, a:active, a:visited {
 	background-color: var(--bg1);
 	color: var(--fg0);
 	border: 0.6vw solid var(--bg3);
+	position: absolute;
+	top: 1vh;
+	left: 1vw;
 	min-width: 40px;
 	min-height: 40px;
 	width: 6vw;
