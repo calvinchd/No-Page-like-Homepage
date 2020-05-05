@@ -1,4 +1,6 @@
 # No page like homepage
+ [![pipeline status](https://gitlab.com/calvinchd/no-page-like-homepage/badges/master/pipeline.svg)](https://gitlab.com/calvinchd/no-page-like-homepage/-/commits/master)
+ 
 A minimal and simple desktop homepage, startpage and/or new tab page. It is not made for or tested on mobile devices.
 
 ## Features
