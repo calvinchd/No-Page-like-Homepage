@@ -7,19 +7,22 @@
 		<meta name="author" content="calvinchd">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" type="image/png" href="favicon.png" sizes="32x32"/>
+		<link rel="stylesheet" id="theme" href="styles/themes/gruvbox-dark.css">
 		<link rel="stylesheet" href="styles/main.css">
 		<script src="scripts/custom.js"></script>
 		<script src="scripts/time.js"></script>
 		<script src="scripts/links.js"></script>
+		<script src="scripts/theme.js"></script>
 		<title>Home</title>
 	</head>
 	<body>
+		<button id="themeButton" onclick="toggleTheme()">&#x1F642;</button>
 		<div class="centerContainer"><div class="centerContent" id="mainContent">
 			<div class="clockTime"><span id="cTime"></span></div>
 			<div class="clockDate"><span id="cDate"></span></div>
 			<div class="clockGreet"><span id="cGreet"></span><span id="cGreetName"></span></div>
-			<hr class="separator">
-			<div class="searchBox">
+			<hr class="separator" id="greetLine">
+			<div class="searchBox" id="searchBox">
 				<form action="https://duckduckgo.com/" method="get">
 					<input class="inputBox" type="text" name="q" placeholder="DuckDuckGo..." autofocus/></form>
 			</div>

@@ -1,4 +1,6 @@
 # No page like homepage
+ [![pipeline status](https://gitlab.com/calvinchd/no-page-like-homepage/badges/master/pipeline.svg)](https://gitlab.com/calvinchd/no-page-like-homepage/-/commits/master)
+ 
 A minimal and simple desktop homepage, startpage and/or new tab page. It is not made for or tested on mobile devices.
 
 ## Features
@@ -6,12 +8,28 @@ A minimal and simple desktop homepage, startpage and/or new tab page. It is not 
 - DuckDuckGo search
 - Personalised greetings
 - Custom link shortcuts
+- Toggle light and dark mode
+- Disable uneeded/unused features
 
 ## Configuration
 ```custom.js``` stores the user's name and links:
 - The name is only used for the personalised greeting
 ``` javascript
 const userName = "John Smith";
+```
+- Enable\Disable features
+``` javascript
+//0b | Theme | Clock | Date | Greeting | Search | Links
+const feats = 0b000000; // set bit to 1 to disable
+// 0b111000 to disable theme, clock and date
+```
+- Theme management
+``` javascript
+// Directory themeLight and themeDark is stored
+const themeDir = "styles/themes/";
+// .css is appended to the end for both themeLight & themeDark
+const themeLight = "gruvbox-light";
+const themeDark = "gruvbox-dark";
 ```
 - Set up link shortcuts, columns, rows and color codes for each link.
 ``` javascript
