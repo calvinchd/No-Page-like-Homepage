@@ -8,6 +8,8 @@ A minimal and simple desktop homepage, startpage and/or new tab page. It is not 
 - DuckDuckGo search
 - Personalised greetings
 - Custom link shortcuts
+- Toggle light and dark mode
+- Disable uneeded/unused features
 
 ## Configuration
 ```custom.js``` stores the user's name and links:
