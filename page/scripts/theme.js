@@ -12,11 +12,11 @@ function initTheme() {
 
 function toggleTheme() {
 	var link = document.getElementById('theme');
-	var current = link.href.split('/').pop();
-	if (current === (themeDark + ".css")) {
-		current = setLight();
-	} else {
+	var current;
+	if (localStorage.getItem("theme") === "light") {
 		current = setDark();
+	} else {
+		current = setLight();
 	}
 	link.href = current + ".css";
 }
