@@ -1,5 +1,8 @@
 const userName = "calvinchd";
 const feats = 0;
+const themeDir = "styles/themes/";
+const themeLight = "gruvbox-light";
+const themeDark = "gruvbox-dark";
 const linksGroups = [[
 	{
 		"header": "",

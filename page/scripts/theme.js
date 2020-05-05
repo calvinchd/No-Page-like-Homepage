@@ -1,7 +1,3 @@
-const themeDir = "styles/themes/";
-const themeLight = "gruvbox-light";
-const themeDark = "gruvbox-dark";
-
 window.addEventListener("load", initTheme, true);
 
 // Load saved theme
