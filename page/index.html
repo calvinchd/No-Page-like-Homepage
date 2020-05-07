@@ -16,11 +16,12 @@
 		<title>Home</title>
 	</head>
 	<body>
-		<button id="themeButton" onclick="toggleTheme()">&#x1F634;</button>
+		<button id="themeButton" onclick="toggleTheme()" style="display:none;">&#x1F634;</button>
 		<div class="centerContainer"><div class="centerContent" id="mainContent">
 			<div class="clockTime"><span id="cTime"></span></div>
 			<div class="clockDate"><span id="cDate"></span></div>
 			<div class="clockGreet"><span id="cGreet"></span><span id="cGreetName"></span></div>
+			<p id="noscript"><noscript>Your browser does not support <strong>Javascript</strong> or has it disabled. This page requires <strong>JS</strong> for most of its functions.</noscript></p>
 			<hr class="separator" id="greetLine">
 			<div class="searchBox" id="searchBox">
 				<form action="https://duckduckgo.com/" method="get">

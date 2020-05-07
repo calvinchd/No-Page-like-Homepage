@@ -8,6 +8,15 @@ body {
 	transition: color 100ms linear, background 100ms linear, border 200ms linear;
 }
 
+#noscript {
+	min-width: 400px;
+	width: 420px;
+	text-align: center;
+	will-change: transform;
+	animation: slideOutLinks 200ms ease-out 100ms backwards;
+	margin: 0 auto;
+}
+
 .centerContainer {
 	padding: 0;
 	display: flex;

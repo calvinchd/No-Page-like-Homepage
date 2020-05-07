@@ -5,8 +5,8 @@ function initTheme() {
 	if (localStorage.getItem("theme") === "light") {
 		document.getElementById('theme').href = setLight() + ".css";
 	}
-	if ((32 & feats) === 32) {
-		document.getElementById("themeButton").style = "display:none;";
+	if (!((32 & feats) === 32)) {
+		document.getElementById("themeButton").style = "";
 	}
 }
 
