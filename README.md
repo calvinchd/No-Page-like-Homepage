@@ -74,6 +74,6 @@ const linksGroups = [[
 ]];
 ```
 ## Credits
-[Gruvbox](https://github.com/morhetz/gruvbox) dark colour palette - [MIT/X11](https://en.wikipedia.org/wiki/MIT_License)
+[Gruvbox](https://github.com/morhetz/gruvbox) colour palette - [MIT/X11](https://en.wikipedia.org/wiki/MIT_License)
 
 Open Sans font - [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)

@@ -5,26 +5,48 @@ body {
 	font-size: 16px;
 	font-weight: 300;
 	user-select: none;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
 	transition: color 100ms linear, background 100ms linear, border 200ms linear;
 }
 
+#noscript {
+	min-width: 400px;
+	width: 420px;
+	text-align: center;
+	will-change: transform;
+	animation: slideOutLinks 200ms ease-out 100ms backwards;
+	margin: 0 auto;
+}
+
 .centerContainer {
-	padding: 0;
+	height: 100vh;
 	display: flex;
 	justify-content: center;
+	align-content: center;
 	align-items: center;
-	overflow: auto;
 }
 
 .centerContent {
-	min-width: 500px;
-	max-width: 100%;
-	margin: 8vh auto 2vh auto;
+	min-width: 400px;
+	max-width: 80vw;
+	max-height: 100vh;
+	align-self: center;
+	vertical-align: top;
+}
+
+.linkGroupContainer {
+	display: block;
+	max-width: 80vw;
+	overflow-x: auto;
+	margin: 0;
+	padding: 0;
 }
 
 .linksColumnsGroup {
 	display: table;
-	margin: auto auto 8px auto;
+	margin: 0 auto;
 	table-layout: fixed;
 }
 
@@ -39,7 +61,7 @@ body {
 	color: var(--fg1);
 	text-align: center;
 	padding: 0px 4px 16px 4px;
-	margin: 0px 0px 24px 0px;
+	margin: 24px 0px 24px 0px;
 	height: 20px;
 	font-size: 20px;
 	font-weight: 700;
@@ -142,18 +164,7 @@ a, a:active, a:visited {
 	font-weight: 300;
 	margin-top: 8px;
 	will-change: transform;
-	animation: greetAnim 300ms ease-out 200ms backwards;
-}
-
-@keyframes greetAnim {
-	from {
-		opacity: 0;
-		transform: translateY(20px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
+	animation: fadeInUp 300ms ease-out 200ms backwards;
 }
 
 .searchBox {
@@ -197,7 +208,8 @@ a, a:active, a:visited {
 }
 
 .separator {
-	width: 100%;
+	min-width: 400px;
+	max-width: 600px;
 	border-bottom: 6px ridge var(--dark-orange);
 	border-radius: 0px 0px 6px 6px;
 	color: var(--dark-orange);
@@ -209,7 +221,7 @@ a, a:active, a:visited {
 	background-color: var(--bg1);
 	color: var(--fg0);
 	border: 0.6vw solid var(--bg3);
-	position: absolute;
+	position: fixed;
 	top: 1vh;
 	left: 1vw;
 	min-width: 40px;
@@ -221,5 +233,17 @@ a, a:active, a:visited {
 	text-decoration: none;
 	padding: 0;
 	border-radius: 2vw;
+	animation: resizeOut 200ms ease-out 700ms backwards;
 	transition: color 100ms linear, background 100ms linear, border 200ms linear;
+}
+
+@keyframes resizeOut {
+	from {
+		opacity: 0;
+		transform: scale(10%);
+	}
+	to {
+		opacity: 1;
+		transform: scale(100%);
+	}
 }

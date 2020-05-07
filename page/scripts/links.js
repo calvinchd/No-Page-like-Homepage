@@ -1,6 +1,6 @@
-window.addEventListener("load", generateLinks, true);
+window.addEventListener("load", initLinks, true);
 
-function generateLinks() {
+function initLinks() {
 	if ((2 & feats) === 2) { // Enable\Disable Search bar
 		document.getElementById("searchBox").style = "display:none;";
 	}
@@ -8,9 +8,15 @@ function generateLinks() {
 	if ((1 & feats) === 1) { // Enable\Disable Links
 		return;
 	}
-	var contentDiv = document.getElementById("mainContent");
+	generateLinks();
+}
+
+function generateLinks() {
+	var shortLinks = document.getElementById("shortLinks");
 	for (const colGroups of linksGroups) {
-		var group = newRow(contentDiv);
+		var groupContainer = document.createElement("div");
+		groupContainer.className = "linkGroupContainer";
+		var group = newRow(groupContainer);
 		for (const colGroup of colGroups) {
 			var col = newColumn(colGroup.header);
 			for (const link of colGroup.links) {
@@ -18,6 +24,7 @@ function generateLinks() {
 			}
 			group.appendChild(col);
 		}
+		shortLinks.appendChild(groupContainer);
 	}
 }
 
@@ -53,7 +60,11 @@ function newLink(url, name, color) {
 	aItem.className = "linksItem";
 	var aIcon = document.createElement("canvas");
 	aIcon.className = "linksIcon";
-	aIcon.style = "background:#" + color+";"; // Apply color
+	if(color.trim() == "") { // no color
+		aIcon.style = "background:var(--bg0);"; 
+	} else { // Apply color
+		aIcon.style = "background:#" + color + ";"; 
+	}
 	// Append elements;
 	aItem.appendChild(aIcon);
 	aItem.appendChild(document.createTextNode(name));
