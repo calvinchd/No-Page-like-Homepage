@@ -24,7 +24,7 @@ body {
 
 .linksColumnsGroup {
 	display: table;
-	margin: auto auto 8px auto;
+	margin: 0 auto;
 	table-layout: fixed;
 }
 
@@ -39,7 +39,7 @@ body {
 	color: var(--fg1);
 	text-align: center;
 	padding: 0px 4px 16px 4px;
-	margin: 0px 0px 24px 0px;
+	margin: 24px 0px 24px 0px;
 	height: 20px;
 	font-size: 20px;
 	font-weight: 700;
