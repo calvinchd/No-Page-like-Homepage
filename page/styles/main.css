@@ -200,7 +200,8 @@ a, a:active, a:visited {
 }
 
 .separator {
-	width: 100%;
+	min-width: 400px;
+	max-width: 600px;
 	border-bottom: 6px ridge var(--dark-orange);
 	border-radius: 0px 0px 6px 6px;
 	color: var(--dark-orange);
