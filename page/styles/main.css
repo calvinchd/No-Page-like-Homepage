@@ -142,18 +142,7 @@ a, a:active, a:visited {
 	font-weight: 300;
 	margin-top: 8px;
 	will-change: transform;
-	animation: greetAnim 300ms ease-out 200ms backwards;
-}
-
-@keyframes greetAnim {
-	from {
-		opacity: 0;
-		transform: translateY(20px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
+	animation: fadeInUp 300ms ease-out 200ms backwards;
 }
 
 .searchBox {
