@@ -12,9 +12,11 @@ function initLinks() {
 }
 
 function generateLinks() {
-	var contentDiv = document.getElementById("mainContent");
+	var shortLinks = document.getElementById("shortLinks");
 	for (const colGroups of linksGroups) {
-		var group = newRow(contentDiv);
+		var groupContainer = document.createElement("div");
+		groupContainer.className = "linkGroupContainer";
+		var group = newRow(groupContainer);
 		for (const colGroup of colGroups) {
 			var col = newColumn(colGroup.header);
 			for (const link of colGroup.links) {
@@ -22,6 +24,7 @@ function generateLinks() {
 			}
 			group.appendChild(col);
 		}
+		shortLinks.appendChild(groupContainer);
 	}
 }
 

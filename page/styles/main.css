@@ -29,11 +29,19 @@ body {
 }
 
 .centerContent {
-	min-width: 500px;
-	max-width: 80%;
+	min-width: 400px;
+	max-width: 80vw;
 	max-height: 100vh;
 	align-self: center;
 	vertical-align: top;
+}
+
+.linkGroupContainer {
+	display: block;
+	max-width: 80vw;
+	overflow-x: auto;
+	margin: 0;
+	padding: 0;
 }
 
 .linksColumnsGroup {
