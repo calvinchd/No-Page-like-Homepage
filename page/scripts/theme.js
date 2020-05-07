@@ -23,14 +23,15 @@ function toggleTheme() {
 
 // Set theme and save in local storage
 function setDark() {
-	//document.getElementById('themeButton').innerHTML = "&#x1F31E;";
-	document.getElementById('themeButton').innerHTML = "&#x1F642;";
+	//document.getElementById('themeButton').innerHTML = "&#x1F31E;"; // Sun
+	//document.getElementById('themeButton').innerHTML = "&#x1F642;"; // Smiley face
+	document.getElementById('themeButton').innerHTML = "&#x1F634;";
 	localStorage.removeItem("theme");
 	return current = themeDir + themeDark;
 }
 function setLight() {
-	//document.getElementById('themeButton').innerHTML = "&#x1F311;";
-	document.getElementById('themeButton').innerHTML = "&#x1F60E;";
+	//document.getElementById('themeButton').innerHTML = "&#x1F311;"; // Moon
+	document.getElementById('themeButton').innerHTML = "&#x1F60E;"; // Sunglasses face
 	localStorage.setItem("theme", "light");
 	return themeDir + themeLight;
 }
