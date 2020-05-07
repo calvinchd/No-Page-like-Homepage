@@ -5,6 +5,9 @@ body {
 	font-size: 16px;
 	font-weight: 300;
 	user-select: none;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
 	transition: color 100ms linear, background 100ms linear, border 200ms linear;
 }
 
@@ -18,17 +21,19 @@ body {
 }
 
 .centerContainer {
-	padding: 0;
+	height: 100vh;
 	display: flex;
 	justify-content: center;
+	align-content: center;
 	align-items: center;
-	overflow: auto;
 }
 
 .centerContent {
 	min-width: 500px;
-	max-width: 100%;
-	margin: 8vh auto 2vh auto;
+	max-width: 80%;
+	max-height: 100vh;
+	align-self: center;
+	vertical-align: top;
 }
 
 .linksColumnsGroup {
@@ -207,7 +212,7 @@ a, a:active, a:visited {
 	background-color: var(--bg1);
 	color: var(--fg0);
 	border: 0.6vw solid var(--bg3);
-	position: absolute;
+	position: fixed;
 	top: 1vh;
 	left: 1vw;
 	min-width: 40px;
