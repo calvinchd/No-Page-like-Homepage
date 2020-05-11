@@ -16,7 +16,7 @@
 		<title>Home</title>
 	</head>
 	<body>
-		<button id="themeButton" onclick="toggleTheme()" style="display:none;">&#x1F634;</button>
+		<button id="themeButton" onclick="toggleTheme()" style="display:none;" tabIndex="1">&#x1F634;</button>
 		<div class="centerContainer"><div class="centerContent">
 			<div class="clockTime"><span id="cTime"></span></div>
 			<div class="clockDate"><span id="cDate"></span></div>
@@ -25,7 +25,7 @@
 			<hr class="separator" id="greetLine">
 			<div class="searchBox" id="searchBox">
 				<form action="https://duckduckgo.com/" method="get">
-					<input class="inputBox" type="text" name="q" placeholder="DuckDuckGo..." autofocus/></form>
+					<input class="inputBox" type="text" name="q" placeholder="DuckDuckGo..." tabIndex="2" autofocus/></form>
 			</div>
 			<div id="shortLinks"></div>
 		</div></div>

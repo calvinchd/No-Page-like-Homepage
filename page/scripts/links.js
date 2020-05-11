@@ -13,6 +13,7 @@ function initLinks() {
 
 function generateLinks() {
 	var shortLinks = document.getElementById("shortLinks");
+	var linkIndex = 3; // Value of first link shortcut tab index
 	for (const colGroups of linksGroups) {
 		var groupContainer = document.createElement("div");
 		groupContainer.className = "linkGroupContainer";
@@ -20,7 +21,7 @@ function generateLinks() {
 		for (const colGroup of colGroups) {
 			var col = newColumn(colGroup.header);
 			for (const link of colGroup.links) {
-				col.appendChild(newLink(link.url, link.name, link.color));
+				col.appendChild(newLink(link.url, link.name, link.color, linkIndex++));
 			}
 			group.appendChild(col);
 		}
@@ -52,12 +53,14 @@ function newColumn(headName) {
 	return col;
 }
 // Makes new link and returns the created DOM element
-function newLink(url, name, color) {
+function newLink(url, name, color, linkIndex) {
 	var aLink = document.createElement("a");
 	aLink.href = url;
 	aLink.rel = "noopener noreferrer"; // no referrer info
+	aLink.tabIndex = -1; // Prevent link focus with tabbing
 	var aItem = document.createElement("p");
 	aItem.className = "linksItem";
+	aItem.tabIndex = linkIndex;
 	var aIcon = document.createElement("canvas");
 	aIcon.className = "linksIcon";
 	if(color.trim() == "") { // no color
