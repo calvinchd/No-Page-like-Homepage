@@ -73,6 +73,19 @@ const linksGroups = [[
 	}
 ]];
 ```
+- Localisation configuration
+```javascript
+const localeStrings = [
+	"Good morning", // 05:00-11:59 greeting
+	"Good afternoon", // 12:00-17:59 greeting
+	"Good evening", // 18:00-23:59 greeting
+	"Good night", // 00:00-04:59 greeting
+	", ", // Greeting and name separator
+	"DuckDuckGo...", // Search box placeholder
+	"Your browser does not support <strong>Javascript</strong> or has it disabled. This page requires <strong>JS</strong> for most of its functions.", // noscript message
+	"Home", // Page title
+];
+```
 ## Credits
 [Gruvbox](https://github.com/morhetz/gruvbox) colour palette - [MIT/X11](https://en.wikipedia.org/wiki/MIT_License)
 
