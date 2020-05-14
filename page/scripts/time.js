@@ -20,7 +20,7 @@ function initialClock() {
 	}
 	if ((4 & feats) === 0) { // Enable\Disable Greeting
 		if (!(userName.trim().length === 0)) {
-			document.getElementById('cGreetName').innerHTML = ", " + userName;
+			document.getElementById('cGreetName').innerHTML = localeStrings[4] + userName;
 		}
 		setGreeting();
 		setInterval(setGreeting, 3600000);
@@ -50,15 +50,15 @@ function setDate(today) {
 // Set greeting by hour of day
 function setGreeting() {
 	var h = new Date().getHours();
-	var greeting = "Good ";
+	var greeting;
 	if (h >= 18) {
-		greeting += "evening";
+		greeting = localeStrings[2];
 	} else if (h >= 12) {
-		greeting += "afternoon";
+		greeting = localeStrings[1];
 	} else if (h >= 5) {
-		greeting += "morning";
+		greeting = localeStrings[0];
 	} else { // 00:00-04:59
-		greeting += "night";
+		greeting = localeStrings[3];
 	}
 	var greet = document.getElementById('cGreet');
 	if (greeting != greet.innerHTML ) {

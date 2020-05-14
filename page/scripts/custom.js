@@ -164,3 +164,13 @@ const linksGroups = [[
 		]
 	}
 ]];
+const localeStrings = [
+	"Good morning", // Greeting strings
+	"Good afternoon",
+	"Good evening",
+	"Good night",
+	", ", // Greeting and name separator
+	"DuckDuckGo...", // Search box placeholder
+	"Your browser does not support <strong>Javascript</strong> or has it disabled. This page requires <strong>JS</strong> for most of its functions.", // noscript message
+	"Home", // Page title
+];
