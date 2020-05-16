@@ -10,8 +10,8 @@ const linksGroups = [[
 			{
 				"name": "r/Startpages",
 				"url": "https://reddit.com/r/startpages/",
-				"color": "E52D27",
-				"shortKey": "0"
+				"color": "E52D27"
+				// links with no shortKey are auto bound
 			}
 		]
 	}
@@ -24,7 +24,7 @@ const linksGroups = [[
 				"name": "Youtube",
 				"url": "https://youtube.com/",
 				"color": "E52D27",
-				"shortKey": "y"
+				"shortKey": "y" // manually bound keys
 			},
 			{
 				"name": "Reddit",
@@ -36,19 +36,19 @@ const linksGroups = [[
 				"name": "Twitch",
 				"url": "https://twitch.tv/",
 				"color": "6441A5",
-				"shortKey": ""
+				"shortKey": "t" // bindings are case sensitive (Shift + t)
 			},
 			{
 				"name": "Twitter",
 				"url": "https://tweetdeck.twitter.com/",
 				"color": "1DA1F2",
-				"shortKey": "t"
+				"shortKey": "T" // 
 			},
 			{
 				"name": "Facebook",
 				"url": "https://facebook.com/",
 				"color": "3B5998",
-				"shortKey": ""
+				"shortKey": "" // empty shortKey values are not auto bound
 			}
 		]
 	},
@@ -94,19 +94,19 @@ const linksGroups = [[
 				"name": "Gmail",
 				"url": "https://mail.google.com/",
 				"color": "DC473A",
-				"shortKey": ""
+				"shortKey": "["
 			},
 			{
 				"name": "Protonmail",
 				"url": "https://mail.protonmail.com/",
 				"color": "333366",
-				"shortKey": ""
+				"shortKey": "]"
 			},
 			{
 				"name": "Tutanota",
 				"url": "https://mail.tutanota.com/mail/",
 				"color": "A01E20",
-				"shortKey": ""
+				"shortKey": "\\"
 			},
 			{
 				"name": "Outlook",
@@ -159,8 +159,7 @@ const linksGroups = [[
 			{
 				"name": "GitLab",
 				"url": "https://gitlab.com/calvinchd",
-				"color": "FC6D26",
-				"shortKey": "1"
+				"color": "FC6D26"
 			}
 		]
 	},
@@ -170,8 +169,7 @@ const linksGroups = [[
 			{
 				"name": "Github",
 				"url": "https://github.com/calvinchd",
-				"color": "46474A",
-				"shortKey": "2"
+				"color": "46474A"
 			}
 		]
 	},
@@ -181,8 +179,7 @@ const linksGroups = [[
 			{
 				"name": "Twitter",
 				"url": "https://twitter.com/truecalvinchd",
-				"color": "17A0DB",
-				"shortKey": "3"
+				"color": "17A0DB"
 			}
 		]
 	}
@@ -197,3 +194,4 @@ const localeStrings = [
 	"Your browser does not support <strong>Javascript</strong> or has it disabled. This page requires <strong>JS</strong> for most of its functions.", // noscript message
 	"Home", // Page title
 ];
+const autoBindKeys = "1234567890qwertyuiop[]asdfghjkl;\'zxcvbnm,.QWERTYUIOOPASDFGHJKL:\"ZXCVBNM<>?"; // Specify keys for auto key binding

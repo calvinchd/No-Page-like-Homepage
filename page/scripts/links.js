@@ -14,6 +14,7 @@ function initLinks() {
 function generateLinks() {
 	var shortLinks = document.getElementById("shortLinks");
 	var linkIndex = 3; // Value of first link shortcut tab index
+	var autoLinks = [];
 	for (const colGroups of linksGroups) {
 		var groupContainer = document.createElement("div");
 		groupContainer.className = "linkGroupContainer";
@@ -21,11 +22,19 @@ function generateLinks() {
 		for (const colGroup of colGroups) {
 			var col = newColumn(colGroup.header);
 			for (const link of colGroup.links) {
-				col.appendChild(newLink(link.url, link.name, link.color, link.shortKey, linkIndex++));
+				col.appendChild(newLink(link.url, link.name, link.color, link.shortKey, linkIndex++, autoLinks));
 			}
 			group.appendChild(col);
 		}
 		shortLinks.appendChild(groupContainer);
+	}
+	// Auto bind links
+	var startIndex = 0;
+	for(const autoLink of autoLinks) {
+		startIndex = addShorcutAuto(autoLink, startIndex);
+		if(startIndex == autoBindKeys.length) {
+			break;
+		}
 	}
 }
 
@@ -53,7 +62,7 @@ function newColumn(headName) {
 	return col;
 }
 // Makes new link and returns the created DOM element
-function newLink(url, name, color, shortKey, linkIndex) {
+function newLink(url, name, color, shortKey, linkIndex, autoLinks) {
 	var aLink = document.createElement("a");
 	aLink.href = url;
 	aLink.rel = "noopener noreferrer"; // no referrer info
@@ -68,14 +77,15 @@ function newLink(url, name, color, shortKey, linkIndex) {
 	} else { // Apply color
 		aIcon.style = "background:#" + color + ";"; 
 	}
-	// Shortcuts
-	if(shortKey !== "")
-	{
-		addShortcut(shortKey, aItem);
-	}
 	// Append elements;
 	aItem.appendChild(aIcon);
 	aItem.appendChild(document.createTextNode(name));
 	aLink.appendChild(aItem);
+	// Shortcuts
+	if (shortKey == null) {
+		autoLinks.push(aItem); // Store link for auto key binding later
+	} else if (shortKey != "") {
+		addShortcut(shortKey, aItem);
+	}
 	return aLink;
 }
