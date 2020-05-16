@@ -21,7 +21,7 @@ function generateLinks() {
 		for (const colGroup of colGroups) {
 			var col = newColumn(colGroup.header);
 			for (const link of colGroup.links) {
-				col.appendChild(newLink(link.url, link.name, link.color, linkIndex++));
+				col.appendChild(newLink(link.url, link.name, link.color, link.shortKey, linkIndex++));
 			}
 			group.appendChild(col);
 		}
@@ -53,7 +53,7 @@ function newColumn(headName) {
 	return col;
 }
 // Makes new link and returns the created DOM element
-function newLink(url, name, color, linkIndex) {
+function newLink(url, name, color, shortKey, linkIndex) {
 	var aLink = document.createElement("a");
 	aLink.href = url;
 	aLink.rel = "noopener noreferrer"; // no referrer info
@@ -67,6 +67,11 @@ function newLink(url, name, color, linkIndex) {
 		aIcon.style = "background:var(--bg0);"; 
 	} else { // Apply color
 		aIcon.style = "background:#" + color + ";"; 
+	}
+	// Shortcuts
+	if(shortKey !== "")
+	{
+		addShortcut(shortKey, aItem);
 	}
 	// Append elements;
 	aItem.appendChild(aIcon);
