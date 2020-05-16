@@ -11,21 +11,23 @@
 		<link rel="stylesheet" href="styles/main.css">
 		<script src="scripts/custom.js"></script>
 		<script src="scripts/time.js"></script>
+		<script src="scripts/keys.js"></script>
 		<script src="scripts/links.js"></script>
 		<script src="scripts/theme.js"></script>
-		<title>Home</title>
+		<script src="scripts/locale.js"></script>
+		<title id="pageTitle"></title>
 	</head>
 	<body>
-		<button id="themeButton" onclick="toggleTheme()" style="display:none;">&#x1F634;</button>
+		<button id="themeButton" onclick="toggleTheme()" style="display:none;" tabIndex="1">&#x1F634;</button>
 		<div class="centerContainer"><div class="centerContent">
 			<div class="clockTime"><span id="cTime"></span></div>
 			<div class="clockDate"><span id="cDate"></span></div>
 			<div class="clockGreet"><span id="cGreet"></span><span id="cGreetName"></span></div>
-			<p id="noscript"><noscript>Your browser does not support <strong>Javascript</strong> or has it disabled. This page requires <strong>JS</strong> for most of its functions.</noscript></p>
+			<p id="noscript"><noscript id="nsMsg"></noscript></p>
 			<hr class="separator" id="greetLine">
 			<div class="searchBox" id="searchBox">
 				<form action="https://duckduckgo.com/" method="get">
-					<input class="inputBox" type="text" name="q" placeholder="DuckDuckGo..." autofocus/></form>
+					<input class="inputBox" id="searchInput" type="text" name="q" placeholder="DuckDuckGo..." tabIndex="2" autofocus/></form>
 			</div>
 			<div id="shortLinks"></div>
 		</div></div>

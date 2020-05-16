@@ -101,7 +101,7 @@ body {
 	animation: slideOutLinks 200ms ease-out 600ms backwards;
 }
 
-.linksItem:hover, #themeButton:hover {
+.linksItem:hover, #themeButton:hover, .linksItem:focus {
 	background: var(--bg0-soft);
 	color: var(--dark-blue);
 }
