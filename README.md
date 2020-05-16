@@ -10,6 +10,7 @@ A minimal and simple desktop homepage, startpage and/or new tab page. It is not 
 - Custom link shortcuts
 - Toggle light and dark mode
 - Disable uneeded/unused features
+- Keyboard shortcuts for links
 
 ## Configuration
 ```custom.js``` stores the user's name and links:
@@ -40,12 +41,14 @@ const linksGroups = [[
 			{
 				"name": "Link1",
 				"url": "https://www.link1.com/",
-				"color": "012345" // hex color codes, # not needed
+				"color": "012345", // hex color codes, # not needed
+				"shortKey": "q" // manually bound keys
 			},
 			{
 				"name": "Link2",
 				"url": "https://link2.com/",
 				"color": "6789AB"
+				"shortKey": "Q" // captial chars (Shift+Q)
 			}
 		]
 	},
@@ -56,6 +59,7 @@ const linksGroups = [[
 				"name": "Link3",
 				"url": "https://link3.com",
 				"color": "CDEF01"
+				"shortKey": "" // prevent key from being bound automatically
 			}
 		]
 	}
@@ -68,6 +72,7 @@ const linksGroups = [[
 				"name": "Link4",
 				"url": "https://link4.com/",
 				"color": "234567B0" // With transparency
+				// Key for this link will be automatically bound
 			}
 		]
 	}
@@ -85,6 +90,11 @@ const localeStrings = [
 	"Your browser does not support <strong>Javascript</strong> or has it disabled. This page requires <strong>JS</strong> for most of its functions.", // noscript message
 	"Home", // Page title
 ];
+```
+- Configure allowed keys for auto key shortcuts
+```javascript
+// Case sensitive accepts capital letters
+const autoBindKeys = "1234567890qwertyuiop[]asdfghjkl;\'zxcvbnm,.QWERTYUIOOPASDFGHJKL:\"ZXCVBNM<>?";
 ```
 ## Credits
 [Gruvbox](https://github.com/morhetz/gruvbox) colour palette - [MIT/X11](https://en.wikipedia.org/wiki/MIT_License)
