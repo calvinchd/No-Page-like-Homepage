@@ -87,7 +87,6 @@ const localeStrings = [
 	"Good night", // 00:00-04:59 greeting
 	", ", // Greeting and name separator
 	"DuckDuckGo...", // Search box placeholder
-	"Your browser does not support <strong>Javascript</strong> or has it disabled. This page requires <strong>JS</strong> for most of its functions.", // noscript message
 	"Home", // Page title
 ];
 ```
