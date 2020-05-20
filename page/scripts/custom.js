@@ -191,7 +191,6 @@ const localeStrings = [
 	"Good night",
 	", ", // Greeting and name separator
 	"DuckDuckGo...", // Search box placeholder
-	"Your browser does not support <strong>Javascript</strong> or has it disabled. This page requires <strong>JS</strong> for most of its functions.", // noscript message
 	"Home", // Page title
 ];
 const autoBindKeys = "1234567890qwertyuiop[]asdfghjkl;\'zxcvbnm,.QWERTYUIOOPASDFGHJKL:\"ZXCVBNM<>?"; // Specify keys for auto key binding
