@@ -44,7 +44,7 @@ function setTime(today) {
 function setDate(today) {
 	document.getElementById('cDate').innerHTML =
 		today.getFullYear() + "-" +
-		formatDoubleDigits(today.getMonth()) + "-" +
+		formatDoubleDigits(today.getMonth() + 1) + "-" +
 		formatDoubleDigits(today.getDate());
 }
 // Set greeting by hour of day
